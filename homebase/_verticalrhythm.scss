@@ -1,0 +1,18 @@
+$rhythm-unit: 0;
+$base-font-size: 0;
+$base-line-height: 0;
+
+@mixin verticalrhythm($base-size, $line-height) {
+  $base-font-size: $base-size;
+  $base-line-height: #{$line-height}px;
+  $rhythm-unit: $line-height/$base-size;
+  font-size: #{$base-size}px;
+  line-height: #{$rhythm-unit}em;
+}
+
+@mixin adjust-size($font-size, $margin-top: 0, $margin-bottom: 0 ) {
+  font-size: #{$font-size}px;
+  line-height: $base-line-height;
+  margin-top: #{($margin-top*$rhythm-unit)*$base-font-size}px;
+  margin-bottom: #{($margin-top*$rhythm-unit)*$base-font-size}px;
+}
