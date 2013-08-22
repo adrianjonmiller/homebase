@@ -1,21 +1,6 @@
 @import "utl";
 @import "vars";
 
-@mixin box-sizing($box-sizing) {
-	-webkit-box-sizing: $box-sizing;
-		 -moz-box-sizing: $box-sizing;
-					box-sizing: $box-sizing;
-}
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  zoom: 1;
-}
-
 /* Grid styles */
 
 * {
@@ -30,7 +15,7 @@ header, #main, footer {
 	position: relative;
 	margin: 0 auto 0;
 	width: 100%;
-	@include clearfix;
+	@extend %clearfix;
 }
 
 .module {
@@ -52,7 +37,7 @@ header, #main, footer {
 @mixin grid-base($pad: 1em) {
 	.grid {
 		margin-bottom: $pad;
-	  	@include clearfix();
+	  	@extend clearfix;
 	}
 	
 	@media screen and (min-width: 480px)
@@ -60,7 +45,7 @@ header, #main, footer {
 		[class*='col-'] {
 		  padding-right: $pad;
 		  &:last-of-type {
-		  	// padding-right: 0;
+		  	padding-right: 0;
 		  }
 		}
 	}

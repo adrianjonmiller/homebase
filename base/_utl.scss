@@ -1,0 +1,24 @@
+// Transition
+@mixin transition ($property, $duration) {
+-webkit-transition: $property $duration;
+   -moz-transition: $property $duration;
+     -o-transition: $property $duration;
+        transition: $property $duration;
+}
+
+// Box Sizing
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing: $box-sizing;
+		 -moz-box-sizing: $box-sizing;
+					box-sizing: $box-sizing;
+}
+
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  zoom: 1;
+}
