@@ -1,9 +1,9 @@
 // Transition
-@mixin transition ($property, $duration) {
--webkit-transition: $property $duration;
-   -moz-transition: $property $duration;
-     -o-transition: $property $duration;
-        transition: $property $duration;
+@mixin transition ($properties) {
+-webkit-transition: $properties;
+   -moz-transition: $properties;
+     -o-transition: $properties;
+        transition: $properties;
 }
 
 // Box Sizing
@@ -12,6 +12,19 @@
 	-webkit-box-sizing: $box-sizing;
 		 -moz-box-sizing: $box-sizing;
 					box-sizing: $box-sizing;
+  }
+}
+
+@mixin border-radius($border-radius: 0) {
+  -webkit-border-radius: $border-radius;
+     -moz-border-radius: $border-radius;
+          border-radius: $border-radius;
+}
+
+@mixin high-light($base-color, $hover-color) {
+  color: $base-color;
+  &:hover {
+    color: $hover-color;
   }
 }
 
@@ -24,3 +37,122 @@
   }
   zoom: 1;
 }
+
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+.cursor-move:hover {
+  cursor: move;
+}
+
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+@mixin font-face($font-family, $font-url-ttf, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: quote($font-family);
+    src: url("#{$font-url-ttf}") format('truetype');
+    // src: url('../fonts/Symbols-Regular.eot');
+    // src: url('../fonts/Symbols-Regular.eot?#iefix') format('embedded-opentype'),
+    //      url('../fonts/Symbols-Regular.woff') format('woff'),
+    //      url('../fonts/Symbols-Regular.ttf') format('truetype'),
+    //      url('../fonts/Symbols-Regular.svg#Symbols-Regular') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@mixin icons($font-face) {
+
+  @font-face {
+      font-family: 'Symbols-Regular';
+      src: url("#{$font-face}") format('truetype');
+      // src: url('../fonts/Symbols-Regular.eot');
+      // src: url('../fonts/Symbols-Regular.eot?#iefix') format('embedded-opentype'),
+      //      url('../fonts/Symbols-Regular.woff') format('woff'),
+      //      url('../fonts/Symbols-Regular.ttf') format('truetype'),
+      //      url('../fonts/Symbols-Regular.svg#Symbols-Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  .icon {
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: 'Symbols-Regular';
+    line-height: normal;
+    vertical-align: baseline;
+    display: inline-block;
+    position: relative;
+
+    label {
+      position: absolute;
+      right: -9999em;
+    }
+
+    &.document,
+    &.f700, {
+      &::before {
+        content: "\F700";
+      }
+    }
+
+    &.lock,
+    &.f701, {
+      &::before {
+        content: "\F701";
+      }
+    }
+    &.calendar,
+    &.f702, {
+      &::before {
+        content: "\F702";
+      }
+    }
+    &.grab,
+    &.f703, {
+      &::before {
+        content: "\F703";
+      }
+    }
+
+    &.window,
+    &.f704, {
+      &::before {
+        content: "\F704";
+      }
+    }
+
+    &.carat,
+    &.f705, {
+      &::before {
+        content: "\F705";
+      }
+    }
+
+    &.magnifying-glass,
+    &.f706, {
+      &::before {
+        content: "\F706";
+      }
+    }
+    &.server,
+    &.f707, {
+      &::before {
+        content: "\F707";
+      }
+    }
+  }
+}
+
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+

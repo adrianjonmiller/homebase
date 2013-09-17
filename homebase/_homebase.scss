@@ -32,6 +32,8 @@ header, #main, footer {
 }
 
 @mixin grid-base($pad: 1em) {
+	@include box-sizing(border-box);
+
 	.grid {
 		margin-bottom: $pad;
 	  	@extend %clearfix;
@@ -54,6 +56,10 @@ header, #main, footer {
 	  &.no-box {
 	  	margin-bottom: 0;
 	  	padding-bottom: 0;
+	  	padding-top: 0;
+	  	[class*='col-'] > .module {
+	  		// padding-top: $pad;
+	  	}
 	  }
 	  
 	  [class*='col-']:last-of-type {
@@ -150,5 +156,5 @@ header, #main, footer {
 		}
 	}
 }
-@include grid-base($pad);
+// @include grid-base($pad);
 @include container-width();
