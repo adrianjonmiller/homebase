@@ -78,73 +78,111 @@
       font-style: normal;
   }
 
-  .icon {
-    font-size: 14px;
-    font-style: normal;
-    text-decoration: none;
-    font-weight: normal;
-    font-family: 'Symbols-Regular';
-    line-height: normal;
-    vertical-align: baseline;
-    display: inline-block;
-    position: relative;
+[class*=" icon-"],
+ [class^="icon-"] {
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: 'Symbols-Regular';
+  line-height: normal;
+  vertical-align: baseline;
+  display: inline-block;
+  position: relative;
+  width: auto !important;
+  height: auto !important;
+  background-image: none !important;
 
-    label {
-      position: absolute;
-      right: -9999em;
-    }
+  label {
+    position: absolute;
+    right: -9999em;
+  }
+}
+  
 
-    &.document,
-    &.f700, {
-      &::before {
-        content: "\F700";
-      }
+  .icon-document,
+  .icon-f700, {
+    &::before {
+      content: "\F700";
     }
+  }
 
-    &.lock,
-    &.f701, {
-      &::before {
-        content: "\F701";
-      }
+  .icon-lock,
+  .icon-f701, {
+    &::before {
+      content: "\F701";
     }
-    &.calendar,
-    &.f702, {
-      &::before {
-        content: "\F702";
-      }
+  }
+  .icon-calendar,
+  .icon-f702, {
+    &::before {
+      content: "\F702";
     }
-    &.grab,
-    &.f703, {
-      &::before {
-        content: "\F703";
-      }
+  }
+  .icon-grab,
+  .icon-f703, {
+    &::before {
+      content: "\F703";
     }
+  }
 
-    &.window,
-    &.f704, {
-      &::before {
-        content: "\F704";
-      }
+  .icon-window,
+  .icon-f704, {
+    &::before {
+      content: "\F704";
     }
+  }
 
-    &.carat,
-    &.f705, {
-      &::before {
-        content: "\F705";
-      }
+  .icon-carat,
+  .icon-f705, {
+    &::before {
+      content: "\F705";
     }
+  }
 
-    &.magnifying-glass,
-    &.f706, {
-      &::before {
-        content: "\F706";
-      }
+  .icon-magnifying-glass,
+  .icon-f706, {
+    &::before {
+      content: "\F706";
     }
-    &.server,
-    &.f707, {
-      &::before {
-        content: "\F707";
-      }
+  }
+  .icon-server,
+  .icon-f707, {
+    &::before {
+      content: "\F707";
+    }
+  }
+  .icon-close,
+  .icon-times, {
+    &::before {
+      font-family: Helvetica, Arial;
+      content: "\00d7";
+      font-weight: 900;
+      font-size: 1.5em;
+    }
+  }
+  .icon-check,
+  .icon-f710, {
+    &::before {
+      content: "\f710";
+    }
+  }
+  .icon-gear,
+  .icon-f717, {
+    &::before {
+      content: "\f717";
+    }
+  }
+  .icon-expand-collapse,
+  .icon-f701, {
+    &::before {
+      content: "\f701";
+    }
+  }
+  .icon-info,
+  .icon-f718, {
+    &::before {
+      content: "\f718";
     }
   }
 }
