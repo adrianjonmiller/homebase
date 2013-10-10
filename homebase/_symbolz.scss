@@ -1,70 +1,4 @@
-// Transition
-@mixin transition ($properties) {
--webkit-transition: $properties;
-   -moz-transition: $properties;
-     -o-transition: $properties;
-        transition: $properties;
-}
-
-// Box Sizing
-@mixin box-sizing($box-sizing) {
-  * {
-	-webkit-box-sizing: $box-sizing;
-		 -moz-box-sizing: $box-sizing;
-					box-sizing: $box-sizing;
-  }
-}
-
-@mixin border-radius($border-radius: 0) {
-  -webkit-border-radius: $border-radius;
-     -moz-border-radius: $border-radius;
-          border-radius: $border-radius;
-}
-
-@mixin high-light($base-color, $hover-color) {
-  color: $base-color;
-  &:hover {
-    color: $hover-color;
-  }
-}
-
-// Clearfix
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  zoom: 1;
-}
-
-.float-left { float: left; }
-
-.float-right { float: right; }
-
-.cursor-move:hover {
-  cursor: move;
-}
-
-.cursor-pointer:hover {
-  cursor: pointer;
-}
-
-@mixin font-face($font-family, $font-url-ttf, $font-weight: normal, $font-style: normal) {
-  @font-face {
-    font-family: quote($font-family);
-    src: url("#{$font-url-ttf}") format('truetype');
-    // src: url('../fonts/Symbols-Regular.eot');
-    // src: url('../fonts/Symbols-Regular.eot?#iefix') format('embedded-opentype'),
-    //      url('../fonts/Symbols-Regular.woff') format('woff'),
-    //      url('../fonts/Symbols-Regular.ttf') format('truetype'),
-    //      url('../fonts/Symbols-Regular.svg#Symbols-Regular') format('svg');
-    font-weight: $font-weight;
-    font-style: $font-style;
-  }
-}
-
-@mixin icons($font-face) {
+@mixin symbolzs($font-face) {
 
   @font-face {
       font-family: 'Symbols-Regular';
@@ -104,8 +38,8 @@
     font-weight: bold;
   }
 
-// [class*=" icon-"],
-//  [class^="icon-"] {
+// [class*=" symbolz-"],
+//  [class^="symbolz-"] {
 //   font-size: 16px;
 //   font-style: normal;
 //   text-decoration: none;
@@ -126,60 +60,60 @@
 // }
   
 
-  .icon-document,
-  .icon-f700, {
+  .symbolz-document,
+  .symbolz-f700, {
     &::before {
       content: "\F700";
     }
   }
 
-  .icon-lock,
-  .icon-f701, {
+  .symbolz-lock,
+  .symbolz-f701, {
     &::before {
       content: "\F701";
     }
   }
-  .icon-calendar,
-  .icon-f702, {
+  .symbolz-calendar,
+  .symbolz-f702, {
     &::before {
       content: "\F702";
     }
   }
-  .icon-grab,
-  .icon-f703, {
+  .symbolz-grab,
+  .symbolz-f703, {
     &::before {
       content: "\F703";
     }
   }
 
-  .icon-window,
-  .icon-f704, {
+  .symbolz-window,
+  .symbolz-f704, {
     &::before {
       content: "\F704";
     }
   }
 
-  .icon-carat,
-  .icon-f705, {
+  .symbolz-carat,
+  .symbolz-f705, {
     &::before {
       content: "\F705";
     }
   }
 
-  .icon-magnifying-glass,
-  .icon-f706, {
+  .symbolz-magnifying-glass,
+  .symbolz-f706, {
     &::before {
       content: "\F706";
     }
   }
-  .icon-server,
-  .icon-f707, {
+  .symbolz-server,
+  .symbolz-f707, {
     &::before {
       content: "\F707";
     }
   }
-  .icon-close,
-  .icon-times, {
+  .symbolz-close,
+  .symbolz-times, {
     &::before {
       font-family: Helvetica, Arial;
       content: "\00d7";
@@ -187,26 +121,26 @@
       font-size: 1.5em;
     }
   }
-  .icon-check,
-  .icon-f710, {
+  .symbolz-check,
+  .symbolz-f710, {
     &::before {
       content: "\f710";
     }
   }
-  .icon-gear,
-  .icon-f717, {
+  .symbolz-gear,
+  .symbolz-f717, {
     &::before {
       content: "\f717";
     }
   }
-  .icon-expand-collapse,
-  .icon-f701, {
+  .symbolz-expand-collapse,
+  .symbolz-f701, {
     &::before {
       content: "\f701";
     }
   }
-  .icon-info,
-  .icon-f718, {
+  .symbolz-info,
+  .symbolz-f718, {
     &::before {
       content: "\f718";
     }
