@@ -1,0 +1,43 @@
+// Button Styles
+////////////////
+
+%button {
+  border: 1px solid darken($black-80,10%);
+  border-bottom: 1px solid darken($black-80,20%);
+  border-radius: 2px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 1px 1px rgba(0,0,0,0.06);
+  color: #8596a5;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  padding: em(10) em(18);
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  @include linear-gradient($black-80, darken($black-80,5%));
+  &.blank {
+    border: 1px solid transparent;
+    background: none;
+    box-shadow: none;
+    &:hover {
+      border: 1px solid darken($black-80,10%);
+      border-bottom: 1px solid darken($black-80,20%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 1px 1px rgba(0,0,0,0.06);
+      @include linear-gradient(saturate($black-80,30%), saturate(darken($black-80,5%),30%));
+    }
+  }
+ &:hover {
+  @include linear-gradient(saturate($black-80,30%), saturate(darken($black-80,5%),30%));
+ }
+ &.selected {
+  border-bottom: 1px solid #d4d7db;
+  border-left: 1px solid #b8b9bc;
+  border-right: 1px solid #b8b9bc;
+  border-top: 1px solid #b8b9bc;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+  @include linear-gradient(#dddfe2, #e8ebee);
+}
+ &.disabled {
+
+ }
+}
