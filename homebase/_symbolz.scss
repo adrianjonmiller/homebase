@@ -1,4 +1,4 @@
-@mixin symbolzs($font-face) {
+@mixin symbolz($font-face) {
 
   @font-face {
       font-family: 'Symbols-Regular';
@@ -143,6 +143,13 @@
   .symbolz-f718, {
     &::before {
       content: "\f718";
+    }
+  }
+
+  .symbolz-trash,
+  .symbolz-f719, {
+    &::before {
+      content: "\f719";
     }
   }
 }

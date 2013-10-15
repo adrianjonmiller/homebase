@@ -1,0 +1,63 @@
+@include keyframes(fadeOutRight) {
+  0% {
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(-4px));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(20px));
+  }
+}
+@include keyframes(fadeOutLeft) {
+  0% {
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(4px));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateX(-20px));
+  }
+}
+@include keyframes(fadeInRight) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-20px));
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(4px));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
+}
+@include keyframes(fadeInLeft) {
+  0% {
+    opacity: 0;
+    @include transform(translateX(20px));
+  }
+  20% {
+    opacity: 1;
+    @include transform(translateX(-4px));
+  }
+  100% {
+    @include transform(translateX(0));
+  }
+}
+
+
+@include keyframes(rotateForwardIn) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(-20px) rotateX(90deg) perspective(20px));
+    // @include transform(rotateX(-90deg));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0) rotateX(0) perspective(0));
+    // @include transform(rotateX(0deg));
+  }
