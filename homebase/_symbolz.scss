@@ -1,8 +1,9 @@
 @mixin symbolz($font-face) {
 
   @font-face {
-      font-family: 'Symbols-Regular';
+      font-family: 'Symbolz-Regular';
       src: url("#{$font-face}") format('truetype');
+      // src: url("font/Symbolz-Regular") format('truetype');
       // src: url('../fonts/Symbols-Regular.eot');
       // src: url('../fonts/Symbols-Regular.eot?#iefix') format('embedded-opentype'),
       //      url('../fonts/Symbols-Regular.woff') format('woff'),
@@ -37,28 +38,6 @@
     font-size: 32px;
     font-weight: bold;
   }
-
-// [class*=" symbolz-"],
-//  [class^="symbolz-"] {
-//   font-size: 16px;
-//   font-style: normal;
-//   text-decoration: none;
-//   font-weight: normal;
-//   font-family: 'Symbols-Regular';
-//   line-height: normal;
-//   vertical-align: baseline;
-//   display: inline-block;
-//   position: relative;
-//   width: auto !important;
-//   height: auto !important;
-//   background-image: none !important;
-
-//   label {
-//     position: absolute;
-//     right: -9999em;
-//   }
-// }
-  
 
   .symbolz-document,
   .symbolz-f700, {
@@ -115,10 +94,10 @@
   .symbolz-close,
   .symbolz-times, {
     &::before {
-      font-family: Helvetica, Arial;
-      content: "\00d7";
-      font-weight: 900;
-      font-size: 1.5em;
+      // font-family: Helvetica, Arial;
+      content: "\f704";
+      // font-weight: 900;
+      // font-size: 1.5em;
     }
   }
   .symbolz-check,
@@ -154,10 +133,6 @@
   }
 }
 
-.unstyled {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+
 
 
